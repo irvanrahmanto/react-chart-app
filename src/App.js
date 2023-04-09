@@ -1,8 +1,9 @@
+import React from 'react';
+
 /** Component import */
-import ExpensesItem from './components/ExpensesItem';
+import NewExpenseItem from '../src/components/Expenses/NewExpenseItem'
 
-
-function App() {
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -10,7 +11,12 @@ function App() {
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    { 
+      id: 'e2', 
+      title: 'New TV', 
+      amount: 799.49, 
+      date: new Date(2021, 2, 12) 
+    },
     {
       id: 'e3',
       title: 'Car Insurance',
@@ -28,13 +34,10 @@ function App() {
   return (
     <>
       <h1>Getting started with your component here:</h1>
-      <ExpensesItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date}></ExpensesItem>
-      <ExpensesItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date}></ExpensesItem>
-      <ExpensesItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date}></ExpensesItem>
-      <ExpensesItem title={expenses[3].title} amount={expenses[3].amount} date={expenses[3].date}></ExpensesItem>
-      
+      <NewExpenseItem items={expenses} />
     </>
   );
 }
 
 export default App;
+      
