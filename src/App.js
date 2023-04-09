@@ -1,8 +1,6 @@
 /** Component import */
 import ExpensesItem from './components/ExpensesItem';
 
-/** CSS import */
-import './App.css';
 
 function App() {
   const expenses = [
