@@ -9,14 +9,14 @@ const Chart = props => {
 
     return (
         <div className='chart'>
-            {props.dataPoints.map((theData) => {
+            {props.dataPoints.map((theData) => (
                 <ChartBar
-                    key={theData.label}
-                    value={theData.value} 
-                    maxValue={totalMaximum} 
-                    label={theData.label} 
-                />
-            })}
+                key={theData.label}
+                value={theData.value} 
+                maxValue={totalMaximum} 
+                label={theData.label} 
+            />
+            ))}
         </div>
     );
 };
